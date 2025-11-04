@@ -1,0 +1,49 @@
+{
+  "name": "reading-journey-checkin",
+  "version": "1.0.0",
+  "description": "少儿绘本阅读'悦读之旅'打卡系统",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon --exec \"ts-node --project tsconfig.server.json\" src/server/index.ts",
+    "client:dev": "cd src/client && npm run dev",
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build:client": "cd src/client && npm run build",
+    "start": "node dist/server.js",
+    "init-db": "ts-node --project tsconfig.server.json src/server/scripts/initDatabase.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "joi": "^17.11.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.8.7",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/multer": "^1.4.11",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.2.2",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "reading",
+    "checkin",
+    "gamification",
+    "children",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT"
+}
