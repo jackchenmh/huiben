@@ -25,7 +25,7 @@ interface CheckInProps {
 }
 
 const CheckIn: React.FC<CheckInProps> = ({ onBack }) => {
-  const { user } = useAuth()
+  const { user: _user } = useAuth()
   const [books, setBooks] = useState<Book[]>([])
   const [selectedBook, setSelectedBook] = useState<Book | null>(null)
   const [checkInData, setCheckInData] = useState<CheckInData>({

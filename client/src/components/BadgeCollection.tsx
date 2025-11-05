@@ -23,7 +23,7 @@ interface BadgeCollectionProps {
 }
 
 const BadgeCollection: React.FC<BadgeCollectionProps> = ({ onBack }) => {
-  const { user } = useAuth()
+  const { user: _user } = useAuth()
   const [badges, setBadges] = useState<Badge[]>([])
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedRarity, setSelectedRarity] = useState<string>('all')

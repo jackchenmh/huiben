@@ -106,14 +106,10 @@ const Dashboard: React.FC = () => {
     return Math.min((current / target) * 100, 100)
   }
 
-  const handleStartReading = (book?: any) => {
+  const handleStartReading = (_book?: any) => {
     setCurrentView('checkin')
   }
 
-  const handleBookClick = (bookId: number) => {
-    setSelectedBookId(bookId)
-    setCurrentView('bookDetail')
-  }
 
   const handleBackToDashboard = () => {
     setCurrentView('dashboard')

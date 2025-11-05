@@ -43,7 +43,7 @@ interface StatisticsProps {
 }
 
 const Statistics: React.FC<StatisticsProps> = ({ onBack }) => {
-  const { user } = useAuth()
+  const { user: _user } = useAuth()
   const [stats, setStats] = useState<ReadingStats | null>(null)
   const [dailyRecords, setDailyRecords] = useState<DailyRecord[]>([])
   const [categoryStats, setCategoryStats] = useState<CategoryStats[]>([])

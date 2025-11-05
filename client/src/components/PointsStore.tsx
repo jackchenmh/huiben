@@ -26,7 +26,7 @@ interface PointsStoreProps {
 }
 
 const PointsStore: React.FC<PointsStoreProps> = ({ onBack }) => {
-  const { user } = useAuth()
+  const { user: _user } = useAuth()
   const [userPoints, setUserPoints] = useState<UserPoints | null>(null)
   const [storeItems, setStoreItems] = useState<StoreItem[]>([])
   const [selectedCategory, setSelectedCategory] = useState<string>('all')

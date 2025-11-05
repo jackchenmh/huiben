@@ -25,7 +25,7 @@ interface BookDetailProps {
 }
 
 const BookDetail: React.FC<BookDetailProps> = ({ bookId, onBack, onStartReading }) => {
-  const { user } = useAuth()
+  const { user: _user } = useAuth()
   const [book, setBook] = useState<Book | null>(null)
   const [loading, setLoading] = useState(true)
   const [readingHistory, setReadingHistory] = useState<any[]>([])
